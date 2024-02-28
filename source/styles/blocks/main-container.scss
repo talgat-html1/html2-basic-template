@@ -1,0 +1,13 @@
+.main-container {
+  flex-grow: 1;
+}
+
+.main-container__badge {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $base-primary;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+}

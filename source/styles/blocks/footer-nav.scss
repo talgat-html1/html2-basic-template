@@ -1,0 +1,10 @@
+.footer-nav__list {
+  @include list;
+}
+
+.footer-nav__item {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
