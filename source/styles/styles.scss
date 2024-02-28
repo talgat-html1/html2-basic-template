@@ -1,7 +1,7 @@
 /* GLOBAL */
+@import "./global/fonts.scss";
 @import "./global/variables.scss";
 @import "./global/global.scss";
-@import "./global/fonts.scss";
 @import "./global/mixins.scss";
 @import "./global/visually-hidden.scss";
 
@@ -14,3 +14,6 @@
 @import "./blocks/advantages.scss";
 @import "./blocks/catalog.scss";
 @import "./blocks/filter.scss";
+@import "./blocks/social.scss";
+@import "./blocks/footer-nav.scss";
+@import "./blocks/contacts.scss";
