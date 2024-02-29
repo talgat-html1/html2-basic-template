@@ -24,13 +24,41 @@
   height: 16px;
   width: 16px;
   padding: 0;
-  background-image: url("../../images/icons/icon-open.svg");
+  background-image: url("../../images/icons/icon-closed.svg");
   background-repeat: no-repeat;
   background-position: right center;
   border: none;
   background-color: inherit;
   align-items: center;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__toggle--closed {
+  display: block;
+  background-image: url("../../images/icons/icon-closed.svg");
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-header__toggle--opened {
+    display: block;
+    background-image: url("../../images/icons/icon-opened.svg");
+  }
 }
 
 .main-header__text {

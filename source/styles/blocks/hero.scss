@@ -12,6 +12,8 @@
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .hero__price-old {
@@ -52,7 +54,7 @@
   }
 }
 
-.hero__container--white {
+.hero__slider--white {
   background-color: $flat-white;
 }
 

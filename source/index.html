@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="preload" href="fonts/Montserrat/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
     <header class="main-header" data-test="header">
@@ -39,7 +38,7 @@
           </button>
         </div>
       </div>
-      <nav class="main-nav main-nav--index main-nav--closed">
+      <nav class="main-nav main-nav--closed">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--current">
@@ -61,10 +60,10 @@
     <main class="main-container">
       <section class="main-container__section hero" data-test="hero">
         <h1 class="visually-hidden">Drink2Go</h1>
-        <div class="hero__container hero__container--white">
+        <div class="hero__container">
           <div class="hero__slider-wrapper">
-            <div class="hero__slider container">
-              <div class="hero__slider-container container">
+            <div class="hero__slider hero__slider--white">
+              <div class="hero__slider-container">
                 <div class="hero__image-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp 1x, images/flat-white-desktop@2x.webp 2x" width="600" height="600">
@@ -88,7 +87,7 @@
               </div>
             </div>
             <div class="hero__slider hero__slider--lavender">
-              <div class="hero__slider-container container">
+              <div class="hero__slider-container">
                 <div class="hero__image-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.webp 1x, images/lavender-desktop@2x.webp 2x" width="600" height="600">
@@ -112,7 +111,7 @@
               </div>
             </div>
             <div class="hero__slider hero__slider--black">
-              <div class="hero__slider-container container">
+              <div class="hero__slider-container">
                 <div class="hero__image-container">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.webp 1x, images/espresso-desktop@2x.webp 2x" width="600" height="600">
@@ -165,20 +164,20 @@
           <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
           <ul class="advantages__list">
             <li class="advantages__item">
-              <h3 class="advantages__item-title">Скорость</h3>
-              <p class="advantages__text advantages__text--speed">Готовый напиток всегда под рукой — просто открой банку</p>
+              <h3 class="advantages__item-title advantages__item-title--speed">Скорость</h3>
+              <p class="advantages__text">Готовый напиток всегда под рукой — просто открой банку</p>
             </li>
             <li class="advantages__item">
-              <h3 class="advantages__item-title">Удобство</h3>
-              <p class="advantages__text advantages__text--fit">Легко помещается и в карман, и в маленькую сумочку</p>
+              <h3 class="advantages__item-title advantages__item-title--fit">Удобство</h3>
+              <p class="advantages__text">Легко помещается и в карман, и&nbsp;в&nbsp;маленькую сумочку</p>
             </li>
             <li class="advantages__item">
-              <h3 class="advantages__item-title">Бодрость</h3>
-              <p class="advantages__text advantages__text--energy">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+              <h3 class="advantages__item-title advantages__item-title--energy">Бодрость</h3>
+              <p class="advantages__text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
             </li>
             <li class="advantages__item">
-              <h3 class="advantages__item-title">Экологичность</h3>
-              <p class="advantages__text advantages__text--eco">Вся упаковка сделана из перерабатываемых материалов</p>
+              <h3 class="advantages__item-title advantages__item-title--eco">Экологичность</h3>
+              <p class="advantages__text">Вся упаковка сделана из перерабатываемых материалов</p>
             </li>
           </ul>
         </div>
@@ -383,7 +382,6 @@
       </section>
     </main>
     <footer class="main-footer" data-test="footer">
-      <!-- <iframe class="main-footer__map" data-test="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226092292753!2d30.314515835725285!3d59.96826596835231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1709031174335!5m2!1sru!2sru" width="320" height="362" allowfullscreen title="Санкт-Петербург, набережная реки Карповки, дом 5."></iframe> -->
       <div class="main-footer__map">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="100%" height="540">
@@ -476,5 +474,7 @@
         </section>
       </div>
     </footer>
+    <script src="scripts/index.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
   </body>
 </html>
