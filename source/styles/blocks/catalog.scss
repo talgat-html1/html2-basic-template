@@ -21,24 +21,47 @@
 
 .catalog__list {
   @include list;
+  min-height: 2620px;
 }
 
 .catalog__item-title {
   font-size: 18px;
   line-height: 32px;
   font-weight: 700;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: $base-black;
 }
 
 .catalog__price {
   font-size: 20px;
   font-weight: 600;
   line-height: 32px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .catalog__button {
+  font-family: $montserrat-font;
   color: $base-white;
   background-color: $base-primary;
   border: none;
+  min-height: 36px;
+  min-width: 141px;
+  border-radius: 4px;
+  padding-left: 36px;
+  padding-right: 10px;
+  position: relative;
+}
+
+.catalog__button::before {
+  @include pseudo;
+  background-image: url("../../images/icons/icon-basket-plus.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 16px;
+  top: 10px;
+  left: 20px;
 }
 
 .catalog__pagination-list {
@@ -46,4 +69,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.catalog__container {
+  min-height: 3760px;
+}
+
+.catalog__item {
+  min-height: 420px;
+  background-color: $base-white;
+}
+
+.catalog__picture-wrapper {
+  padding: 30px 65px 0 65px;
+  margin: 10px 10px;
+}
+
+.catalog__text {
+  margin-left: 20px;
+  margin-right: 20px;
 }
