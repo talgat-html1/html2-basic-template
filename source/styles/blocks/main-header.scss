@@ -1,8 +1,68 @@
 .main-header {
-  font-family: $montserrat-font;
   text-transform: uppercase;
+  background-color: $base-white;
 }
 
-.main-header__button {
-  font-family: $montserrat-font;
+.main-header__logo {
+  position: relative;
+  padding: 12px 0 12px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    position: relative;
+    width: 174px;
+    min-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    padding: 0;
+  }
+}
+
+.main-header__toggle {
+  height: 16px;
+  width: 16px;
+  padding: 0;
+  background-image: url("../../images/icons/icon-open.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  border: none;
+  background-color: inherit;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main-header__text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: unset;
+  }
+}
+
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header__link {
+  display: block;
+}
+
+.main-header__nav {
+  display: flex;
+  padding: 22px 0 22px 0;
+  min-width: 180px;
+  justify-content: space-between;
+}
+
+.main-header__title {
+  text-transform: none;
+  color: $base-black;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: unset;
+  }
 }

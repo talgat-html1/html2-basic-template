@@ -14,55 +14,65 @@
         <div class="main-header__logo">
           <a class="main-header__link logo" href="index.html" aria-current="page">
             <picture>
-              <source media="(min-width: 1300px)" srcset="img/logo-image-desktop.svg" width="70" height="59">
-              <source media="(min-width: 768px)" srcset="img/logo-image-tablet.svg" width="60" height="50">
-              <img class="logo__image" src="img/logo-image-mobile.svg" width="33" height="38" alt="Логотип Drink2Go.">
+              <source media="(min-width: 1440px)" srcset="images/d2go-logo-full.svg" width="170" height="36">
+              <source media="(min-width: 768px)" srcset="images/d2go-logo-medium.svg" width="82" height="36">
+              <img class="logo__image" src="images/d2go-logo-short.svg" width="32" height="36" alt="Логотип Drink2Go.">
             </picture>
           </a>
+          <a class="main-header__title" href="index.html" aria-current="page">Интернет-магазин кофейных напитков</a>
         </div>
-        <nav class="main-nav main-nav--index main-nav--closed">
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item site-list__item--current">
-                <a class="site-list__link" href="index.html" aria-current="page">Главная</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="catalog.html">Каталог</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="delivery.html">Доставка</a>
-              </li>
-              <li class="site-list__item">
-                <a class="site-list__link" href="about-us.html">О нас</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
         <div class="main-header__nav">
-          <button class="main-header__button" type="button">
-            <span class="visually-hidden">Войти</span>
-          </button>
-          <button class="main-header__button" type="button">
-            <span class="visually-hidden">Корзина</span>
-          </button>
+          <a class="main-header__link" href="#">
+            <svg class="main-header__icon" width="16" height="16">
+              <use href="images/icons/stack.svg#icon-user"></use>
+            </svg>
+            <span class="main-header__text">Войти</span>
+          </a>
+          <a class="main-header__link" href="#">
+            <svg class="main-header__icon" width="16" height="16">
+              <use href="images/icons/stack.svg#icon-basket"></use>
+            </svg>
+            <span class="main-header__text">Корзина</span>
+          </a>
           <button class="main-header__toggle main-header__toggle--closed js-toggle-button" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </div>
       </div>
+      <nav class="main-nav main-nav--index main-nav--closed">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--current">
+              <a class="site-list__link" href="index.html" aria-current="page">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="delivery.html">Доставка</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="about-us.html">О нас</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main class="main-container">
       <section class="main-container__section hero" data-test="hero">
         <h1 class="visually-hidden">Drink2Go</h1>
-        <div class="hero__container container">
-          <div class="hero__slider">
-            <div class="hero__slider-container">
-              <div class="hero__slide">
+        <div class="hero__container hero__container--white">
+          <div class="hero__slider-wrapper">
+            <div class="hero__slider container">
+              <div class="hero__slider-container container">
                 <div class="hero__image-container">
                   <picture>
-                    <source media="(min-width: 1300px)" srcset="img/index-can-desktop.png, img/index-can-desktop@2x.png 2x" width="552" height="499">
-                    <source media="(min-width: 768px)" srcset="img/index-can-tablet.png, img/index-can-tablet@2x.png 2x" width="709" height="609">
-                    <img class="hero__product-image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Белая банка кофе Декаф Флэт Уайт.">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.webp 1x, images/flat-white-desktop@2x.webp 2x" width="600" height="600">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.webp 1x, images/flat-white-tablet@2x.webp 2x" width="476" height="476">
+                    <source type="image/webp" srcset="images/flat-white-mobile@1x.webp 1x, images/flat-white-mobile@2x.webp 2x" width="280" height="280">
+                    <source media="(min-width: 1440px)" srcset="images/flat-white-desktop@1x.png 1x, images/flat-white-desktop@2x.png 2x" width="600" height="600">
+                    <source media="(min-width: 768px)" srcset="images/flat-white-tablet@1x.png 1x, images/flat-white-tablet@2x.png 2x" width="476" height="476">
+                    <img class="hero__product-image" src="images/flat-white-mobile@1x.png 1x" srcset="images/flat-white-mobile@2x.png 2x" width="280" height="280" alt="Белая банка кофе Декаф Флэт Уайт.">
                   </picture>
                 </div>
                 <div class="hero__description">
@@ -75,58 +85,76 @@
                   <span class="hero__price-new">225₽</span>
                   <a class="hero__link" href="#">Заказать</a>
                 </div>
-                <div class="hero__slide">
-                  <div class="hero__image-container">
-                    <picture>
-                      <source media="(min-width: 1300px)" srcset="img/index-can-desktop.png, img/index-can-desktop@2x.png 2x" width="552" height="499">
-                      <source media="(min-width: 768px)" srcset="img/index-can-tablet.png, img/index-can-tablet@2x.png 2x" width="709" height="609">
-                      <img class="hero__product-image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Фиолетовая банка кофе Лавандовый латте.">
-                    </picture>
-                  </div>
-                  <div class="hero__description">
-                    <span class="main-container__badge">Новинка!</span>
-                    <h2 class="hero__title">Лавандовый Латте</h2>
-                    <p class="hero__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-                  </div>
-                  <div class="hero__slider-price">
-                    <span class="hero__price-old">295₽</span>
-                    <span class="hero__price-new">225₽</span>
-                    <a class="hero__link" href="#">Заказать</a>
-                  </div>
-                  <div class="hero__slide">
-                    <div class="hero__image-container">
-                      <picture>
-                        <source media="(min-width: 1300px)" srcset="img/index-can-desktop.png, img/index-can-desktop@2x.png 2x" width="552" height="499">
-                        <source media="(min-width: 768px)" srcset="img/index-can-tablet.png, img/index-can-tablet@2x.png 2x" width="709" height="609">
-                        <img class="hero__product-image" src="img/index-can-mobile.png" srcset="img/index-can-mobile@2x.png 2x" width="280" height="270" alt="Чёрная банка кофе Тройной эспрессо.">
-                      </picture>
-                    </div>
-                    <div class="hero__description">
-                      <span class="main-container__badge">Новинка!</span>
-                      <h2 class="hero__title">Тройной эспрессо</h2>
-                      <p class="hero__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-                    </div>
-                    <div class="hero__slider-price">
-                      <span class="hero__price-old">295₽</span>
-                      <span class="hero__price-new">225₽</span>
-                      <a class="hero__link" href="#">Заказать</a>
-                    </div>
               </div>
             </div>
-            <div class="hero__arrows">
-              <button class="hero__arrow hero__arrow--left slider-button-prev" type="button">
-                <span class="visually-hidden">Предыдущий слайд.</span>
-              </button>
-              <button class="hero__arrow hero__arrow--right slider-button-next" type="button">
-                <span class="visually-hidden">Следующий слайд.</span>
-              </button>
-            </div>
-            <div class="hero__pages-container">
-              <div class="hero__pages slider-pagination">
-                <button class="hero__page hero__page--active" type="button"></button>
-                <button class="hero__page" type="button"></button>
-                <button class="hero__page" type="button"></button>
+            <div class="hero__slider hero__slider--lavender">
+              <div class="hero__slider-container container">
+                <div class="hero__image-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.webp 1x, images/lavender-desktop@2x.webp 2x" width="600" height="600">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="images/lavender-tablet@1x.webp 1x, images/lavender-tablet@2x.webp 2x" width="476" height="476">
+                    <source type="image/webp" srcset="images/lavender-mobile@1x.webp 1x, images/lavender-mobile@2x.webp 2x" width="280" height="280">
+                    <source media="(min-width: 1440px)" srcset="images/lavender-desktop@1x.png 1x, images/lavender-desktop@2x.png 2x" width="600" height="600">
+                    <source media="(min-width: 768px)" srcset="images/lavender-tablet@1x.png 1x, images/lavender-tablet@2x.png 2x" width="476" height="476">
+                    <img class="hero__product-image" src="images/lavender-mobile@1x.png 1x" srcset="images/lavender-mobile@2x.png 2x" width="280" height="280" alt="Фиолетовая банка кофе Лавандовый латте.">
+                  </picture>
+                </div>
+                <div class="hero__description">
+                  <span class="main-container__badge">Новинка!</span>
+                  <h2 class="hero__title">Лавандовый Латте</h2>
+                  <p class="hero__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                </div>
+                <div class="hero__slider-price">
+                  <span class="hero__price-old">285₽</span>
+                  <span class="hero__price-new">265₽</span>
+                  <a class="hero__link" href="#">Заказать</a>
+                </div>
               </div>
+            </div>
+            <div class="hero__slider hero__slider--black">
+              <div class="hero__slider-container container">
+                <div class="hero__image-container">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.webp 1x, images/espresso-desktop@2x.webp 2x" width="600" height="600">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="images/espresso-tablet@1x.webp 1x, images/espresso-tablet@2x.webp 2x" width="476" height="476">
+                    <source type="image/webp" srcset="images/espresso-mobile@1x.webp 1x, images/espresso-mobile@2x.webp 2x" width="280" height="280">
+                    <source media="(min-width: 1440px)" srcset="images/espresso-desktop@1x.png 1x, images/espresso-desktop@2x.png 2x" width="600" height="600">
+                    <source media="(min-width: 768px)" srcset="images/espresso-tablet@1x.png 1x, images/espresso-tablet@2x.png 2x" width="476" height="476">
+                    <img class="hero__product-image" src="images/espresso-mobile@1x.png 1x" srcset="images/espresso-mobile@2x.png 2x" width="280" height="280" alt="Чёрная банка кофе Тройной эспрессо.">
+                  </picture>
+                </div>
+                <div class="hero__description">
+                  <span class="main-container__badge">Новинка!</span>
+                  <h2 class="hero__title">Тройной эспрессо</h2>
+                  <p class="hero__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                </div>
+                <div class="hero__slider-price">
+                  <span class="hero__price-old">395₽</span>
+                  <span class="hero__price-new">375₽</span>
+                  <a class="hero__link" href="#">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero__arrows">
+            <button class="hero__arrow hero__arrow--left slider-button-prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд.</span>
+              <svg class="hero__arrows-left" width="20" height="20">
+                <use href="images/icons/stack.svg#icon-slider-arrow"></use>
+              </svg>
+            </button>
+            <button class="hero__arrow hero__arrow--right slider-button-next" type="button">
+              <span class="visually-hidden">Следующий слайд.</span>
+              <svg class="hero__arrows-right" width="20" height="20">
+                <use href="images/icons/stack.svg#icon-slider-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="hero__pages-container">
+            <div class="hero__pages slider-pagination">
+              <button class="hero__page hero__page--active" type="button"></button>
+              <button class="hero__page" type="button"></button>
+              <button class="hero__page" type="button"></button>
             </div>
           </div>
         </div>
@@ -253,8 +281,8 @@
               <a class="catalog__link" href="#">
                 <div class="catalog__picture-wrapper">
                   <picture>
-                    <source type="image/webp" srcset="images/catalog/item-1@1x.webp 1x, images/catalog/item-1@2x.webp 2x">
-                    <img class="catalog__image" loading="lazy" src="images/catalog/item-1@1x.jpg" srcset="images/catalog/item-1@2x.jpg 2x" width="130" height="188" alt="Белая банка кофе Декаф Флэт Уайт.">
+                    <source type="image/webp" srcset="images/can-1-white@1x.webp 1x, images/can-1-white@2x.webp 2x" width="130" height="188">
+                    <img class="catalog__image" src="images/can-1-white@1x.png" srcset="images/can-1-white@2x.png 2x" width="130" height="188" alt="Белая банка кофе Декаф Флэт Уайт.">
                   </picture>
                 </div>
                 <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -267,8 +295,8 @@
               <a class="catalog__link" href="#">
                 <div class="catalog__picture-wrapper">
                   <picture>
-                    <source type="image/webp" srcset="images/catalog/item-1@1x.webp 1x, images/catalog/item-1@2x.webp 2x">
-                    <img class="catalog__image" loading="lazy" src="images/catalog/item-1@1x.jpg" srcset="images/catalog/item-1@2x.jpg 2x" width="130" height="188" alt="Фиолетовая банка кофе Декаф Флэт Уайт.">
+                    <source type="image/webp" srcset="images/can-2-violet@1x.webp 1x, images/can-2-violet@2x.webp 2x" width="130" height="188">
+                    <img class="catalog__image" src="images/can-2-violet@1x.png" srcset="images/can-2-violet@2x.png 2x" width="130" height="188" alt="Фиолетовая банка кофе Декаф Флэт Уайт.">
                   </picture>
                 </div>
                 <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -281,8 +309,8 @@
               <a class="catalog__link" href="#">
                 <div class="catalog__picture-wrapper">
                   <picture>
-                    <source type="image/webp" srcset="images/catalog/item-1@1x.webp 1x, images/catalog/item-1@2x.webp 2x">
-                    <img class="catalog__image" loading="lazy" src="images/catalog/item-1@1x.jpg" srcset="images/catalog/item-1@2x.jpg 2x" width="130" height="188" alt="Чёрная банка кофе Декаф Флэт Уайт.">
+                    <source type="image/webp" srcset="images/can-3-black@1x.webp 1x, images/can-3-black@2x.webp 2x" width="130" height="188">
+                    <img class="catalog__image" src="images/can-3-black@1x.png" srcset="images/can-3-black@2x.png 2x" width="130" height="188" alt="Чёрная банка кофе Декаф Флэт Уайт.">
                   </picture>
                 </div>
                 <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -295,8 +323,8 @@
               <a class="catalog__link" href="#">
                 <div class="catalog__picture-wrapper">
                   <picture>
-                    <source type="image/webp" srcset="images/catalog/item-1@1x.webp 1x, images/catalog/item-1@2x.webp 2x">
-                    <img class="catalog__image" loading="lazy" src="images/catalog/item-1@1x.jpg" srcset="images/catalog/item-1@2x.jpg 2x" width="130" height="188" alt="Розовая банка кофе Декаф Флэт Уайт.">
+                    <source type="image/webp" srcset="images/can-4-pink@1x.webp 1x, images/can-4-pink@2x.webp 2x" width="130" height="188">
+                    <img class="catalog__image" src="images/can-4-pink@1x.png" srcset="images/can-4-pink@2x.png 2x" width="130" height="188" alt="Розовая банка кофе Декаф Флэт Уайт.">
                   </picture>
                 </div>
                 <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -309,8 +337,8 @@
               <a class="catalog__link" href="#">
                 <div class="catalog__picture-wrapper">
                   <picture>
-                    <source type="image/webp" srcset="images/catalog/item-1@1x.webp 1x, images/catalog/item-1@2x.webp 2x">
-                    <img class="catalog__image" loading="lazy" src="images/catalog/item-1@1x.jpg" srcset="images/catalog/item-1@2x.jpg 2x" width="130" height="188" alt="Коричневая банка кофе Декаф Флэт Уайт.">
+                    <source type="image/webp" srcset="images/can-5-brown@1x.webp 1x, images/can-5-brown@2x.webp 2x" width="130" height="188">
+                    <img class="catalog__image" src="images/can-5-brown@1x.png" srcset="images/can-5-brown@2x.png 2x" width="130" height="188" alt="Коричневая банка кофе Декаф Флэт Уайт.">
                   </picture>
                 </div>
                 <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -323,8 +351,8 @@
               <a class="catalog__link" href="#">
                 <div class="catalog__picture-wrapper">
                   <picture>
-                    <source type="image/webp" srcset="images/catalog/item-1@1x.webp 1x, images/catalog/item-1@2x.webp 2x">
-                    <img class="catalog__image" loading="lazy" src="images/catalog/item-1@1x.jpg" srcset="images/catalog/item-1@2x.jpg 2x" width="130" height="188" alt="Жёлтая банка кофе Декаф Флэт Уайт.">
+                    <source type="image/webp" srcset="images/can-6-yellow@1x.webp 1x, images/can-6-yellow@2x.webp 2x" width="130" height="188">
+                    <img class="catalog__image" src="images/can-6-yellow@1x.png" srcset="images/can-6-yellow@2x.png 2x" width="130" height="188" alt="Жёлтая банка кофе Декаф Флэт Уайт.">
                   </picture>
                 </div>
                 <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -355,22 +383,26 @@
       </section>
     </main>
     <footer class="main-footer" data-test="footer">
-      <iframe class="main-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226092292753!2d30.314515835725285!3d59.96826596835231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1709031174335!5m2!1sru!2sru" width="320" height="362" allowfullscreen title="Санкт-Петербург, набережная реки Карповки, дом 5."></iframe>
+      <!-- <iframe class="main-footer__map" data-test="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226092292753!2d30.314515835725285!3d59.96826596835231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1709031174335!5m2!1sru!2sru" width="320" height="362" allowfullscreen title="Санкт-Петербург, набережная реки Карповки, дом 5."></iframe> -->
+      <div class="main-footer__map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="100%" height="540">
+          <source type="image/webp" media="(min-width: 768px)" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="100%" height="480">
+          <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="100%" height="420">
+          <source media="(min-width: 1440px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="540">
+          <source media="(min-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="480">
+          <img src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" alt="Санкт-Петербург, набережная реки Карповки, дом 5." width="320" height="420">
+        </picture>
+      </div>
       <div class="main-footer__container">
         <section class="main-footer__section social">
           <div class="social__container container">
             <h4 class="visually-hidden">Социальные ссылки</h4>
             <a class="main-footer__logo logo" href="index.html" aria-current="page">
-              <svg class="logo__footer" role="img" aria-label="Логотип Drink2Go." xmlns="http://www.w3.org/2000/svg" width="128" height="24" viewBox="0 0 128 24">
-                <g clip-path="url(#a)">
-                  <path d="M1.624 21.957A9.428 9.428 0 0 1 .02 16.238V7.762A9.559 9.559 0 0 1 1.523 1.94C2.625.613 4.327 0 6.831 0c2.503 0 4.106.613 5.107 1.736A7.433 7.433 0 0 1 13.44 6.74v2.043H8.533V6.434a5.116 5.116 0 0 0-.3-2.043 1.46 1.46 0 0 0-.579-.627 1.42 1.42 0 0 0-.823-.19c-.701 0-1.202.205-1.402.715a6.72 6.72 0 0 0-.3 2.247v10.928a4.3 4.3 0 0 0 .4 2.145c.2.51.701.714 1.402.714s1.102-.204 1.302-.715c.227-.69.33-1.417.3-2.144v-2.451h4.907v2.042a7.922 7.922 0 0 1-1.502 5.107C10.937 23.387 9.234 24 6.831 24c-2.403-.102-4.206-.715-5.207-2.043ZM19.348.306h5.708l4.206 23.285h-4.606l-.801-4.902H20.55l-.801 4.902h-4.707L19.348.306Zm4.106 15.32-1.202-9.09-1.201 9.09h2.403ZM32.767 4.187h-3.405V.307H41.28v3.778h-3.405v19.506h-5.107V4.188ZM50.392.306h8.812v2.451h-5.708v7.66h4.606v2.349h-4.606v8.579h5.708v2.349H50.29V.306h.1ZM61.808.306h2.203l6.509 15.422V.306h2.603v23.285h-2.002L64.51 7.66V23.59h-2.703V.306ZM76.128.306h8.812v2.451h-5.708v7.66h4.606v2.349h-4.606v8.579h5.708v2.349h-8.812V.306ZM87.543.306h4.607a7.896 7.896 0 0 1 5.107 1.43c1.102.92 1.602 2.553 1.602 4.698 0 2.962-.901 4.8-2.804 5.413l3.205 11.642h-3.105l-3.004-10.927h-2.503v10.927h-3.205V.306h.1Zm4.407 10.009a4.313 4.313 0 0 0 2.904-.817c.6-.51.901-1.532.901-3.064a6.722 6.722 0 0 0-.3-2.247 2.576 2.576 0 0 0-1.102-1.225 4.488 4.488 0 0 0-2.203-.409h-1.402v7.66h1.202v.102ZM102.865 21.855a10.485 10.485 0 0 1-1.402-5.923V8.17c-.025-1.48.144-2.957.501-4.391a5.186 5.186 0 0 1 1.902-2.656 6.438 6.438 0 0 1 3.705-.919c2.103 0 3.606.51 4.507 1.634a7.93 7.93 0 0 1 1.402 5.107v.817h-3.004v-.715c.004-.855-.063-1.71-.201-2.553a2.045 2.045 0 0 0-.801-1.328 3.05 3.05 0 0 0-1.903-.51 2.961 2.961 0 0 0-2.002.612 2.331 2.331 0 0 0-.801 1.634 19.568 19.568 0 0 0-.201 2.758v8.68a9.433 9.433 0 0 0 .601 3.881c.401.817 1.202 1.124 2.403 1.124.475.06.956-.024 1.384-.242.428-.218.782-.56 1.02-.984a9.572 9.572 0 0 0 .701-4.085V14.4h-2.904v-2.349h5.808v11.54h-2.003l-.3-2.655a4.172 4.172 0 0 1-1.553 2.202 4.03 4.03 0 0 1-2.553.76 4.924 4.924 0 0 1-2.406-.468 5.032 5.032 0 0 1-1.9-1.575ZM119.989 15.421 115.082.408h3.004l3.505 11.235L124.996.408H128l-4.907 15.013v8.17h-3.004v-8.17h-.1Z"/>
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M0 0h128v24H0z"/>
-                  </clipPath>
-                </defs>
-              </svg>
+              <picture>
+                <source media="(min-width: 768px)" srcset="images/d2go-logo-full.svg" width="170" height="36">
+                <img class="logo__footer" src="images/d2go-logo-medium.svg" width="82" height="36" alt="Логотип Drink2Go.">
+              </picture>
             </a>
             <span class="social__text">Интернет-магазин кофейных напитков</span>
             <ul class="social__list social-list">
@@ -427,7 +459,7 @@
             <a class="contacts__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
           </div>
           <div class="contacts__logo container">
-            <a class="contacts__logo-link" href="https://htmlacademy.ru/profession/frontender">
+            <a class="contacts__logo-link" href="https://htmlacademy.ru/intensive/adaptive">
               <span class="contacts__logo-text">Разработано в</span>
               <svg class="contacts__logo-icon" role="img" aria-label="Логотип HTML Academy." xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 27 34">
                 <g clip-path="url(#b)">
