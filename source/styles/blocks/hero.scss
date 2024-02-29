@@ -1,10 +1,17 @@
 .hero {
   font-family: $montserrat-font;
   text-align: center;
+  position: relative;
 }
 
 .hero__price {
   line-height: 32px;
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
 }
 
 .hero__price-old {
@@ -22,4 +29,74 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
+}
+
+.hero__page {
+  width: 62px;
+  height: 4px;
+  border: none;
+  background-color: $base-white;
+  transform: translateY(-60px);
+  opacity: 1;
+}
+
+.hero__page--active {
+  background-color: $base-primary;
+}
+
+.hero__pages {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: unset;
+  }
+}
+
+.hero__container--white {
+  background-color: $flat-white;
+}
+
+.hero__slider--lavender {
+  background-color: $lavender-latte;
+}
+
+.hero__slider--black {
+  background-color: $espresso;
+}
+
+.hero__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.hero__arrow--left {
+  left: 0;
+}
+
+.hero__arrow--right {
+  right: 0;
+}
+
+.hero__arrows-right {
+  transform: rotate(180deg);
+}
+
+.hero__container {
+  min-height: 656px;
+  overflow: hidden;
+}
+
+.hero__slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hero__slider {
+  position: relative;
 }

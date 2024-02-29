@@ -1,0 +1,14 @@
+.site-list__link {
+  color: $base-black;
+}
+
+.site-list__item {
+  text-align: center;
+  padding: 20px 40px 20px 40px;
+  position: relative;
+  border-bottom: 1px solid $base-secondary;
+}
+
+.site-list__item:first-child {
+  border-top: 1px solid $base-secondary;
+}
