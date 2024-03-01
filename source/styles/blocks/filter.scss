@@ -1,30 +1,35 @@
 .filter {
   font-size: 16px;
   line-height: 24px;
+  min-height: 770px;
 }
 
 .filter__title {
   font-weight: 600;
-}
-
-.filter__range-input {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 500;
-}
-
-.filter__range-input--from {
-  color: $base-grey;
+  padding: 0;
 }
 
 .filter__set {
   border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter__set-milk {
+  min-height: 200px;
+}
+
+.filter__set-country {
+  min-height: 244px;
 }
 
 .filter__button {
+  font-family: $montserrat-font;
   font-size: 16px;
   line-height: 24px;
   border: none;
+  min-height: 40px;
+  border-radius: 4px;
 }
 
 .filter__button--submit {
@@ -35,4 +40,91 @@
 .filter__button--reset {
   background-color: $base-white;
   color: $base-primary;
+}
+
+.filter__button-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  gap: 20px;
+}
+
+.filter__set-milk {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.filter__set-country {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.filter__label-milk {
+  position: relative;
+  display: block;
+  padding: 0 34px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.filter__radio-mark {
+  @include pseudo;
+  width: 24px;
+  height: 24px;
+  background-color: $base-white;
+  border-radius: 50%;
+  border: 2px solid $base-primary;
+  top: 0;
+  left: 0;
+}
+
+.filter__radio[type="radio"]:checked + .filter__radio-mark::before {
+  @include pseudo;
+  width: 16px;
+  height: 16px;
+  background-color: $base-primary;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+}
+
+.filter__label-country {
+  position: relative;
+  display: block;
+  padding: 0 52px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.filter__toggle-mark {
+  @include pseudo;
+  width: 42px;
+  height: 24px;
+  background-color: $base-grey;
+  border-radius: 12px;
+  top: 0;
+  left: 0;
+}
+
+.filter__toggle-mark::before {
+  @include pseudo;
+  width: 20px;
+  height: 20px;
+  background-color: $base-white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: .3s;
+}
+
+.filter__toggle[type="checkbox"]:checked + .filter__toggle-mark::before {
+  transform: translateX(18px);
+  background-color: $base-white;
+  transition: .3s;
+}
+
+.filter__toggle[type="checkbox"]:checked + .filter__toggle-mark {
+  background-color: $base-primary;
 }

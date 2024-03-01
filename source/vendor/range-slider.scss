@@ -1,0 +1,92 @@
+.range-slider.noUi-target {
+  height: 4px;
+  border: none;
+  border-radius: 0;
+  background: $light-grey;
+  box-shadow: none;
+}
+
+.range-slider.noUi-horizontal .noUi-handle {
+  top: -10px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $primary-lighter;
+  border-radius: 50%;
+  background-color: $base-white;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.range-slider .noUi-handle.noUi-handle-upper {
+  right: -8px;
+
+  @media (min-width: $tablet-width) {
+    right: -2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: -12px;
+  }
+}
+
+.range-slider .noUi-handle.noUi-handle-lower {
+  right: -24px;
+}
+
+.range-slider .noUi-connect {
+  border-radius: 0;
+}
+
+.range-slider .noUi-connect {
+  height: 4px;
+  background: $primary-lighter;
+}
+
+.range-slider .noUi-active:active {
+  border: 2px solid $base-primary;
+  box-shadow: none;
+}
+
+.range-slider .noUi-handle:before,
+.range-slider .noUi-handle:after {
+  content: "";
+  display: none;
+}
+
+.range-slider .noUi-active:active .noUi-touch-area::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $base-primary;
+  }
+
+.range-slider .noUi-touch-area:hover::after,
+.range-slider .noUi-handle:focus-visible .noUi-touch-area::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $primary-opacity;
+}
+
+  [disabled] .noUi-connect {
+    background: $base-grey;
+  }
+
+  [disabled] .noUi-handle {
+    background: $lightest-grey;
+    border: 2px solid $base-grey;
+  }
+
+  [disabled] .noUi-handle::after {
+    display: none;
+  }

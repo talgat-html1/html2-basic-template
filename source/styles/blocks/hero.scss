@@ -12,12 +12,15 @@
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
+  width: 280px;
+  margin: 0 auto;
 }
 
 .hero__price-old {
   font-size: 16px;
   color: $base-primary;
   text-decoration: line-through;
+  margin-left: 25px;
 }
 
 .hero__price-new {
@@ -52,7 +55,7 @@
   }
 }
 
-.hero__container--white {
+.hero__slider--white {
   background-color: $flat-white;
 }
 
@@ -99,4 +102,36 @@
 
 .hero__slider {
   position: relative;
+}
+
+.hero__link {
+  color: $base-white;
+  background-color: $base-primary;
+  min-height: 40px;
+  width: 113px;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 8px 20px;
+  margin-right: 25px;
+}
+
+.hero__slider-price {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  justify-content: space-between;
+  margin: 0 auto 60px auto;
+  width: 320px;
+  padding: 0 20px;
+}
+
+.hero__image-container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.hero__text {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 0 20px;
 }

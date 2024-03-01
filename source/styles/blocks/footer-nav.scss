@@ -8,3 +8,19 @@
   font-weight: 500;
   text-transform: uppercase;
 }
+
+.footer-nav__store {
+  min-height: 212px;
+  border-bottom: 1px solid $base-secondary;
+}
+
+.footer-nav__media {
+  min-height: 176px;
+  border-bottom: 1px solid $base-secondary;
+}
+
+.footer-nav__link {
+  color: $base-black;
+  padding: 8px 8px 8px 0;
+  display: block;
+}

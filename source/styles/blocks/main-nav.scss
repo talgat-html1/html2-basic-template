@@ -1,3 +1,27 @@
 .main-nav__list {
   @include list;
 }
+
+.main-nav {
+  position: relative;
+  background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed {
+  display: none;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--opened {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;
+    z-index: 5;
+  }
+}
