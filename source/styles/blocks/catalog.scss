@@ -3,6 +3,7 @@
   line-height: 36px;
   font-weight: 700;
   text-align: center;
+  margin: 20px 0;
 }
 
 .catalog__sorting {
@@ -52,6 +53,7 @@
   padding-left: 36px;
   padding-right: 10px;
   position: relative;
+  cursor: pointer;
 }
 
 .catalog__button::before {
@@ -69,10 +71,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 160px;
+}
+
+.catalog__pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .catalog__container {
   min-height: 3760px;
+  padding-top: 60px;
 }
 
 .catalog__item {
@@ -88,4 +98,160 @@
 .catalog__text {
   margin-left: 20px;
   margin-right: 20px;
+  color: $base-black;
+}
+
+.catalog__pagination-link {
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-align: center;
+  padding: px;
+  color: $base-primary;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.catalog__pagination-link--current {
+  font-weight: 600;
+  color: $base-black;
+}
+
+.catalog__pagination-item {
+  width: 40px;
+  height: 40px;
+  background-color: $base-white;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.catalog__pagination-item--current {
+  background-color: transparent;
+}
+
+.catalog__pagination-button {
+  width: 40px;
+  height: 40px;
+  background-color: $base-white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.catalog__pagination-prev {
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: inherit;
+  transform: rotate(90deg);
+  cursor: pointer;
+  padding: 0;
+  margin: 15px 13px 15px 17px;
+}
+
+.catalog__pagination-next {
+  width: 10px;
+  height: 10px;
+  border: none;
+  background-color: inherit;
+  transform: rotate(270deg);
+  cursor: pointer;
+  padding: 0;
+  margin: 15px 17px 15px 13px;
+}
+
+.catalog__range-wrapper {
+  height: 24px;
+  padding-top: 10px;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.catalog__price-input {
+  padding: 8px 10px;
+  width: 118px;
+  height: 40px;
+
+  font-family: $montserrat-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  appearance: textfield;
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.catalog__price-input::-webkit-outer-spin-button,
+.catalog__price-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.catalog__price-input:not(:disabled):hover,
+.catalog__price-input:not(:disabled):focus-visible {
+  border-color: $primary-darker;
+  outline: none;
+}
+
+.catalog__price-input:disabled {
+  background-color: $lightest-grey;
+  border-color: $light-grey;
+  color: $base-grey;
+}
+
+.catalog__price-input::placeholder {
+  color: $base-grey;
+}
+
+.catalog__number-wrapper::after {
+  @include pseudo;
+  top: 20px;
+  left: 136px;
+  width: 8px;
+  height: 2px;
+  background-color: $base-grey;
+
+  @media (min-width: $tablet-width) {
+    left: 107px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 10px;
+    left: 154px;
+  }
+}
+
+.catalog__filter-wrapper {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 223px 222px 223px;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 318px;
+    margin-top: 4px;
+  }
+}
+
+.catalog__filter-list {
+  @include list;
 }

@@ -10,12 +10,12 @@
   <body class="page__body">
     <header class="main-header" data-test="header">
       <div class="main-header__container container">
-        <div class="main-header__logo">
-          <a class="main-header__link logo" href="index.html" aria-current="page">
+        <div class="main-header__logo-container">
+          <a class="main-header__logo" href="index.html" aria-current="page">
             <picture>
               <source media="(min-width: 1440px)" srcset="images/d2go-logo-full.svg" width="170" height="36">
               <source media="(min-width: 768px)" srcset="images/d2go-logo-medium.svg" width="82" height="36">
-              <img class="logo__image" src="images/d2go-logo-short.svg" width="32" height="36" alt="Логотип Drink2Go.">
+              <img class="main-header__link-image" src="images/d2go-logo-short.svg" width="32" height="36" alt="Логотип Drink2Go.">
             </picture>
           </a>
           <a class="main-header__title" href="index.html" aria-current="page">Интернет-магазин кофейных напитков</a>
@@ -187,78 +187,71 @@
           <span class="main-container__badge">Каталог</span>
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
           <form class="filter" action="https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="filter__set">
-              <legend class="filter__title">Цена</legend>
-              <div class="filter__range-scale">
-                <div class="filter__range-bar">
-                  <button class="filter__range-toggle filter__toggle-min" type="button">
-                    <span class="visually-hidden">Изменить минимальную цену.</span>
-                  </button>
-                  <button class="filter__range-toggle filter__toggle-max" type="button">
-                    <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
+            <div class="catalog__filter-wrapper">
+              <div class="catalog__price">
+                <label class="catalog__subtitle">Цена</label>
+                <div class="catalog__range-wrapper">
+                  <div class="catalog__range range-slider" id="price-range">
+                  </div>
+                </div>
+                <div class="catalog__number-wrapper">
+                  <label class="visually-hidden" for="input-min">От</label>
+                  <input class="catalog__price-input catalog__price-input--min" type="number" name="min-price"
+                    placeholder="0" id="input-min">
+                  <label class="visually-hidden" for="input-max">До</label>
+                  <input class="catalog__price-input catalog__price-input--max" type="number" name="max-price"
+                    placeholder="900" id="input-max">
                 </div>
               </div>
-              <div class="filter__range">
-                <div class="filter__range-wrapper">
-                  <label class="filter__range-label">
-                    <input class="filter__range-input filter__range-input--from" type="number" name="min-price" value="0" required>
-                  </label>
-                  <label class="filter__range-label">
-                    <input class="filter__range-input filter__range-input--to" type="number" name="max-price" value="900" required>
-                    </label>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="filter__set">
+            <fieldset class="filter__set filter__set-milk">
               <legend class="filter__title">Наличие молока</legend>
-              <label class="filter__label">
+              <label class="filter__label-milk">
                 <input class="filter__radio visually-hidden" type="radio" name="milk" value="does not matter" checked="checked">
                 <span class="filter__radio-mark"></span>
                 <span class="filter__mark">Неважно</span>
               </label>
-              <label class="filter__label">
+              <label class="filter__label-milk">
                 <input class="filter__radio visually-hidden" type="radio" name="milk" value="animal">
                 <span class="filter__radio-mark"></span>
                 <span class="filter__mark">Только животное</span>
               </label>
-              <label class="filter__label">
+              <label class="filter__label-milk">
                 <input class="filter__radio visually-hidden" type="radio" name="milk" value="vegetable">
                 <span class="filter__radio-mark"></span>
                 <span class="filter__mark">Только растительное</span>
               </label>
-              <label class="filter__label">
-                <input class="filter__radio visually-hidden" type="radio" name="milk" value="no">
+              <label class="filter__label-milk">
+                <input class="filter__radio visually-hidden" type="radio" name="milk" value="no" disabled>
                 <span class="filter__radio-mark"></span>
                 <span class="filter__mark">Без молока</span>
               </label>
             </fieldset>
-            <fieldset class="filter__set">
+            <fieldset class="filter__set filter__set-country">
               <legend class="filter__title">Страна произрастания</legend>
-              <label class="filter__label">
-                <input class="filter__box visually-hidden" type="checkbox" name="country" value="Brazil" checked="checked">
-                <span class="filter__checkbox"></span>
-                <span class="filter__check">Бразилия</span>
+              <label class="filter__label-country">
+                <input class="filter__toggle visually-hidden" type="checkbox" name="country" value="Brazil" checked="checked">
+                <span class="filter__toggle-mark"></span>
+                <span class="filter__toggle-name">Бразилия</span>
               </label>
-              <label class="filter__label">
-                <input class="filter__box visually-hidden" type="checkbox" name="country" value="Ethiopia">
-                <span class="filter__checkbox"></span>
-                <span class="filter__check">Эфиопия</span>
+              <label class="filter__label-country">
+                <input class="filter__toggle visually-hidden" type="checkbox" name="country" value="Ethiopia">
+                <span class="filter__toggle-mark"></span>
+                <span class="filter__toggle-name">Эфиопия</span>
               </label>
-              <label class="filter__label">
-                <input class="filter__box visually-hidden" type="checkbox" name="country" value="Colombia">
-                <span class="filter__checkbox"></span>
-                <span class="filter__check">Колумбия</span>
+              <label class="filter__label-country">
+                <input class="filter__toggle visually-hidden" type="checkbox" name="country" value="Colombia">
+                <span class="filter__toggle-mark"></span>
+                <span class="filter__toggle-name">Колумбия</span>
               </label>
-              <label class="filter__label">
-                <input class="filter__box visually-hidden" type="checkbox" name="country" value="Costa Rica">
-                <span class="filter__checkbox"></span>
-                <span class="filter__check">Коста-Рика</span>
+              <label class="filter__label-country">
+                <input class="filter__toggle visually-hidden" type="checkbox" name="country" value="Costa Rica">
+                <span class="filter__toggle-mark"></span>
+                <span class="filter__toggle-name">Коста-Рика</span>
               </label>
-              <label class="filter__label">
-                <input class="filter__box visually-hidden" type="checkbox" name="country" value="Peru">
-                <span class="filter__checkbox"></span>
-                <span class="filter__check">Перу</span>
+              <label class="filter__label-country">
+                <input class="filter__toggle visually-hidden" type="checkbox" name="country" value="Peru" disabled>
+                <span class="filter__toggle-mark"></span>
+                <span class="filter__toggle-name">Перу</span>
               </label>
             </fieldset>
             <div class="filter__button-container">
@@ -361,23 +354,33 @@
               <button class="catalog__button" type="button">В корзину</button>
             </li>
           </ul>
-          <ul class="catalog__pagination-list">
-            <li class="catalog__pagination-button">
-              <button class="catalog__pagination-prev" type="button"></button>
-            </li>
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-link" href="#">1</a>
-            </li>
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-link catalog__pagination-link--current" href="index.html" aria-current="page">2</a>
-            </li>
-            <li class="catalog__pagination-item">
-              <a class="catalog__pagination-link" href="#">3</a>
-            </li>
-            <li class="catalog__pagination-button">
-              <button class="catalog__pagination-next" type="button"></button>
-            </li>
-          </ul>
+          <div class="catalog__pagination-container">
+            <div class="catalog__pagination-button">
+              <button class="catalog__pagination-prev" type="button">
+                <svg class="catalog__pagination-svg" width="10" height="10">
+                  <use href="images/icons/stack.svg#icon-pagination-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="catalog__pagination-list">
+              <li class="catalog__pagination-item">
+                <a class="catalog__pagination-link" href="#">1</a>
+              </li>
+              <li class="catalog__pagination-item catalog__pagination-item--current">
+                <a class="catalog__pagination-link catalog__pagination-link--current" href="index.html" aria-current="page">2</a>
+              </li>
+              <li class="catalog__pagination-item">
+                <a class="catalog__pagination-link" href="#">3</a>
+              </li>
+            </ul>
+            <div class="catalog__pagination-button">
+              <button class="catalog__pagination-next" type="button">
+                <svg class="catalog__pagination-svg" width="10" height="10">
+                  <use href="images/icons/stack.svg#icon-pagination-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -487,7 +490,7 @@
         </section>
       </div>
     </footer>
-    <script src="scripts/index.js" defer></script>
-    <script src="scripts/nav.js" defer></script>
+    <script src="vendor/nouislider.js" defer></script>
+    <script src="scripts/modal.js" defer></script>
   </body>
 </html>
