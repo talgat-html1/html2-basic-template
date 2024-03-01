@@ -80,13 +80,27 @@
   height: 60px;
   width: 60px;
 
-  &:hover {
-    opacity: 0.5;
+  &:active {
+    background-color: $primary-opacity;
   }
 
-  &:active {
-    opacity: 0.2;
+  @media (min-width: $desktop-width) {
+    &:hover svg {
+      fill: $base-primary;
+    }
+
+    &:focus svg {
+      fill: $base-primary;
+    }
+
+    &:active {
+      fill: $base-primary;
+    }
   }
+}
+
+.main-header__link svg {
+  fill: $base-black;
 }
 
 .main-header__link-image {

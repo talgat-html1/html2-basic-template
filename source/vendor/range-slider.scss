@@ -1,9 +1,13 @@
 .range-slider.noUi-target {
-  height: 4px;
+  height: 2px;
   border: none;
   border-radius: 0;
   background: $light-grey;
   box-shadow: none;
+}
+
+.range-slider .noUi-base {
+  height: 4px;
 }
 
 .range-slider.noUi-horizontal .noUi-handle {
@@ -54,8 +58,7 @@
 }
 
 .range-slider .noUi-active:active .noUi-touch-area::after {
-  content: "";
-  position: absolute;
+  @include pseudo;
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;
@@ -67,8 +70,7 @@
 
 .range-slider .noUi-touch-area:hover::after,
 .range-slider .noUi-handle:focus-visible .noUi-touch-area::after {
-  content: "";
-  position: absolute;
+  @include pseudo;
   top: 50%;
   transform: translate(-50%, -50%);
   left: 50%;

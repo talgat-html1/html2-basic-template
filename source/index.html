@@ -61,8 +61,8 @@
       <section class="main-container__section hero" data-test="hero">
         <h1 class="visually-hidden">Drink2Go</h1>
         <div class="hero__container">
-          <div class="hero__slider-wrapper">
-            <div class="hero__slider hero__slider--white">
+          <div class="hero__slider-view hero__slider-view--active hero__slider-white">
+            <div class="hero__slider container">
               <div class="hero__slider-container">
                 <div class="hero__image-container">
                   <picture>
@@ -86,7 +86,9 @@
                 </div>
               </div>
             </div>
-            <div class="hero__slider hero__slider--lavender">
+          </div>
+          <div class="hero__slider-view hero__slider-lavender">
+            <div class="hero__slider container">
               <div class="hero__slider-container">
                 <div class="hero__image-container">
                   <picture>
@@ -110,7 +112,9 @@
                 </div>
               </div>
             </div>
-            <div class="hero__slider hero__slider--black">
+          </div>
+          <div class="hero__slider-view hero__slider-black">
+            <div class="hero__slider container">
               <div class="hero__slider-container">
                 <div class="hero__image-container">
                   <picture>
@@ -188,7 +192,7 @@
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
           <form class="filter" action="https://echo.htmlacademy.ru/" method="post">
             <div class="catalog__filter-wrapper">
-              <div class="catalog__price">
+              <div class="catalog__price-container">
                 <label class="catalog__subtitle">Цена</label>
                 <div class="catalog__range-wrapper">
                   <div class="catalog__range range-slider" id="price-range">
@@ -196,11 +200,9 @@
                 </div>
                 <div class="catalog__number-wrapper">
                   <label class="visually-hidden" for="input-min">От</label>
-                  <input class="catalog__price-input catalog__price-input--min" type="number" name="min-price"
-                    placeholder="0" id="input-min">
+                  <input class="catalog__price-input catalog__price-input--min" id="input-min" type="number" name="min-price" placeholder="0">
                   <label class="visually-hidden" for="input-max">До</label>
-                  <input class="catalog__price-input catalog__price-input--max" type="number" name="max-price"
-                    placeholder="900" id="input-max">
+                  <input class="catalog__price-input catalog__price-input--max" id="input-max" type="number" name="max-price" placeholder="900">
                 </div>
               </div>
             <fieldset class="filter__set filter__set-milk">
@@ -262,7 +264,7 @@
           <div class="catalog__sorting">
             <span class="catalog__sorting-title">Сортировка:</span>
             <select class="catalog__select" name="sorting" aria-label="Сортировка.">
-              <option value="default">По умолчанию</option>
+              <option value="default">по умолчанию</option>
               <option value="cheap">Сначала дешёвые</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярные</option>

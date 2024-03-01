@@ -1,37 +1,66 @@
-/* в этот файл добавляет скрипты*/
-const slider = document.querySelector('.hero__slider-wrapper');
-const prevButton = document.querySelector('.hero__arrow--left');
-const nextButton = document.querySelector('.hero__arrow--right');
-const slides = Array.from(slider.querySelectorAll('.hero__slider'));
-const slideCount = slides.length;
-let slideIndex = 0;
+const slides = document.querySelectorAll('.hero__slider-view');
+const buttonPrev = document.querySelector('.slider-button-prev');
+const buttonNext = document.querySelector('.slider-button-next');
+const paginationButtons = document.querySelectorAll('.hero__page');
 
-// Устанавливаем обработчики событий для кнопок
-prevButton.addEventListener('click', showPreviousSlide);
-nextButton.addEventListener('click', showNextSlide);
+let currentSlide = 0;
 
-// Функция для показа предыдущего слайда
-function showPreviousSlide() {
-  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-  updateSlider();
-}
+// Отключает кнопки в начальной позиции
+buttonPrev.disabled = true;
 
-// Функция для показа следующего слайда
-function showNextSlide() {
-  slideIndex = (slideIndex + 1) % slideCount;
-  updateSlider();
-}
-
-// Функция для обновления отображения слайдера
-function updateSlider() {
+// показать слайд
+const showSlide = () => {
   slides.forEach((slide, index) => {
-    if (index === slideIndex) {
-      slide.style.display = 'block';
+    if (index === currentSlide) {
+      slide.classList.add('hero__slider-view');
+      paginationButtons[index].classList.add('hero__page--active');
     } else {
-      slide.style.display = 'none';
+      slide.classList.remove('hero__slider-view--active');
+      paginationButtons[index].classList.remove('hero__page--active');
     }
   });
-}
 
-// Инициализация слайдера
-updateSlider();
+  // активировать или дезактивировать кнопки в зависимости от текущего слайда
+  if (currentSlide === 0) {
+    buttonPrev.disabled = true;
+  } else {
+    buttonPrev.disabled = false;
+  }
+
+  if (currentSlide === slides.length - 1) {
+    buttonNext.disabled = true;
+  } else {
+    buttonNext.disabled = false;
+  }
+};
+
+const onNextButtonClick = () => {
+  if (currentSlide < slides.length - 1) {
+    currentSlide++;
+    showSlide();
+  }
+};
+
+const onPrevButtonClick = () => {
+  if (currentSlide > 0) {
+    currentSlide--;
+    showSlide();
+  }
+};
+
+const onPaginationButtonClick = (index) => {
+  currentSlide = index;
+  showSlide();
+};
+
+buttonNext.addEventListener('click', onNextButtonClick);
+buttonPrev.addEventListener('click', onPrevButtonClick);
+
+paginationButtons.forEach((button, index) => {
+  button.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    onPaginationButtonClick(index);
+  });
+});
+
+export { showSlide };
