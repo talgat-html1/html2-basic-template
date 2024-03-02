@@ -12,15 +12,18 @@
 .footer-nav__store {
   min-height: 212px;
   border-bottom: 1px solid $base-secondary;
+  margin-bottom: 1px;
 }
 
 .footer-nav__media {
   min-height: 176px;
   border-bottom: 1px solid $base-secondary;
+  margin-bottom: 1px;
 }
 
 .footer-nav__link {
   color: $base-black;
-  padding: 8px 8px 8px 0;
+  padding: 8px 8px 12px 0;
   display: block;
+  letter-spacing: 0.02em;
 }

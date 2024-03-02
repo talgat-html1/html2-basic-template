@@ -7,9 +7,10 @@
   display: flex;
   width: 160px;
   min-height: 40px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 6px;
 }
 
 .social__text {
@@ -22,7 +23,7 @@
 .social__container {
   display: flex;
   justify-content: space-between;
-  min-height: 80px;
+  min-height: 75px;
   align-items: center;
 }
 
