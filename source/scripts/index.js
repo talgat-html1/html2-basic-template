@@ -12,7 +12,7 @@ buttonPrev.disabled = true;
 const showSlide = () => {
   slides.forEach((slide, index) => {
     if (index === currentSlide) {
-      slide.classList.add('hero__slider-view');
+      slide.classList.add('hero__slider-view--active');
       paginationButtons[index].classList.add('hero__page--active');
     } else {
       slide.classList.remove('hero__slider-view--active');
