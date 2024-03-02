@@ -2,11 +2,13 @@
   font-size: 16px;
   line-height: 24px;
   min-height: 770px;
+  margin-bottom: 36px;
 }
 
 .filter__title {
   font-weight: 600;
   padding: 0;
+  margin-bottom: 20px;
 }
 
 .filter__set {
@@ -17,6 +19,7 @@
 
 .filter__set-milk {
   min-height: 200px;
+  margin-bottom: 10px;
 }
 
 .filter__set-country {
@@ -47,6 +50,7 @@
   flex-direction: column;
   min-height: 100px;
   gap: 20px;
+  margin-top: 10px;
 }
 
 .filter__set-milk {

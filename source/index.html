@@ -61,8 +61,8 @@
       <section class="main-container__section hero" data-test="hero">
         <h1 class="visually-hidden">Drink2Go</h1>
         <div class="hero__container">
-          <div class="hero__slider-wrapper">
-            <div class="hero__slider hero__slider--white">
+          <div class="hero__slider-view hero__slider-view--active hero__slider-white">
+            <div class="hero__slider container">
               <div class="hero__slider-container">
                 <div class="hero__image-container">
                   <picture>
@@ -75,7 +75,7 @@
                   </picture>
                 </div>
                 <div class="hero__description">
-                  <span class="main-container__badge">Новинка!</span>
+                  <span class="main-container__badge main-container__badge--new">Новинка!</span>
                   <h2 class="hero__title">Декаф Флэт Уайт</h2>
                   <p class="hero__text">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                 </div>
@@ -86,7 +86,9 @@
                 </div>
               </div>
             </div>
-            <div class="hero__slider hero__slider--lavender">
+          </div>
+          <div class="hero__slider-view hero__slider-lavender">
+            <div class="hero__slider container">
               <div class="hero__slider-container">
                 <div class="hero__image-container">
                   <picture>
@@ -99,7 +101,7 @@
                   </picture>
                 </div>
                 <div class="hero__description">
-                  <span class="main-container__badge">Новинка!</span>
+                  <span class="main-container__badge main-container__badge--new">Новинка!</span>
                   <h2 class="hero__title">Лавандовый Латте</h2>
                   <p class="hero__text">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
                 </div>
@@ -110,7 +112,9 @@
                 </div>
               </div>
             </div>
-            <div class="hero__slider hero__slider--black">
+          </div>
+          <div class="hero__slider-view hero__slider-black">
+            <div class="hero__slider container">
               <div class="hero__slider-container">
                 <div class="hero__image-container">
                   <picture>
@@ -123,9 +127,9 @@
                   </picture>
                 </div>
                 <div class="hero__description">
-                  <span class="main-container__badge">Новинка!</span>
+                  <span class="main-container__badge main-container__badge--new">Новинка!</span>
                   <h2 class="hero__title">Тройной эспрессо</h2>
-                  <p class="hero__text">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                  <p class="hero__text hero__text--espresso">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
                 </div>
                 <div class="hero__slider-price">
                   <span class="hero__price-old">395₽</span>
@@ -177,7 +181,7 @@
             </li>
             <li class="advantages__item">
               <h3 class="advantages__item-title advantages__item-title--eco">Экологичность</h3>
-              <p class="advantages__text">Вся упаковка сделана из перерабатываемых материалов</p>
+              <p class="advantages__text">Вся упаковка сделана из&nbsp;перерабатываемых материалов</p>
             </li>
           </ul>
         </div>
@@ -188,7 +192,7 @@
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
           <form class="filter" action="https://echo.htmlacademy.ru/" method="post">
             <div class="catalog__filter-wrapper">
-              <div class="catalog__price">
+              <div class="catalog__price-container">
                 <label class="catalog__subtitle">Цена</label>
                 <div class="catalog__range-wrapper">
                   <div class="catalog__range range-slider" id="price-range">
@@ -196,11 +200,9 @@
                 </div>
                 <div class="catalog__number-wrapper">
                   <label class="visually-hidden" for="input-min">От</label>
-                  <input class="catalog__price-input catalog__price-input--min" type="number" name="min-price"
-                    placeholder="0" id="input-min">
+                  <input class="catalog__price-input catalog__price-input--min" id="input-min" type="number" name="min-price" placeholder="0">
                   <label class="visually-hidden" for="input-max">До</label>
-                  <input class="catalog__price-input catalog__price-input--max" type="number" name="max-price"
-                    placeholder="900" id="input-max">
+                  <input class="catalog__price-input catalog__price-input--max" id="input-max" type="number" name="max-price" placeholder="900">
                 </div>
               </div>
             <fieldset class="filter__set filter__set-milk">
@@ -262,7 +264,7 @@
           <div class="catalog__sorting">
             <span class="catalog__sorting-title">Сортировка:</span>
             <select class="catalog__select" name="sorting" aria-label="Сортировка.">
-              <option value="default">По умолчанию</option>
+              <option value="default">по умолчанию</option>
               <option value="cheap">Сначала дешёвые</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярные</option>
