@@ -42,5 +42,12 @@
     display: flex;
     width: 412px;
     margin-left: 20px;
+    flex-wrap: wrap;
+
+    @media (min-width: $desktop-width) {
+      width: 471px;
+      margin-left: 12px;
+      justify-content: space-between;
+    }
   }
 }

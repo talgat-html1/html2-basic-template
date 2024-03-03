@@ -23,15 +23,30 @@
     width: 608px;
     margin: 0 auto 16px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 625px;
+    margin: 0;
+    padding-left: 15px;
+  }
 }
 
 .hero__image-container {
   margin-bottom: 4px;
+  min-height: 280px;
 
   @media (min-width: $tablet-width) {
     position: absolute;
     left: 146px;
     top: 293px;
+    min-height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: unset;
+    grid-row: 1/3;
+    min-height: 600px;
+    padding-left: 50px;
   }
 }
 
@@ -41,6 +56,11 @@
   text-decoration: line-through;
   margin-left: 25px;
   line-height: 32px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 15px;
+    margin-top: 1px;
+  }
 }
 
 .hero__price-new {
@@ -62,17 +82,29 @@
   background-color: $base-white;
   transform: translateY(-60px);
   opacity: 1;
+  margin-right: 8px;
+  cursor: pointer;
 }
 
 .hero__page--active {
   background-color: $base-primary;
 }
 
-.hero__pages {
+.hero__pages-container {
   display: none;
 
   @media (min-width: $desktop-width) {
     display: unset;
+    position: relative;
+  }
+}
+
+.hero__pages {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    left: -101px;
   }
 }
 
@@ -90,9 +122,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 30px;
-    padding-bottom: 84px;
     min-height: 714px;
-
   }
 }
 
@@ -154,6 +184,11 @@
     width: 80px;
     min-height: 640px;
     top: 321px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 714px;
+    top: 358px;
   }
 
   &:disabled svg {
@@ -223,6 +258,10 @@
   margin-right: 25px;
   font-size: 16px;
   line-height: 24px;
+
+  @media (min-width: $desktop-width) {
+    margin-right: 35px;
+  }
 }
 
 .hero__slider-price {
@@ -230,8 +269,14 @@
   align-items: center;
   min-height: 40px;
   justify-content: space-between;
-  margin: 0 auto 60px auto;
+  margin: 0 auto;
   width: 280px;
+  padding-bottom: 60px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-bottom: 154px;
+  }
 }
 
 .hero__text {
@@ -245,8 +290,27 @@
     width: 608px;
     margin: 0 auto 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin: 17px 0 0 10px;
+  }
 }
 
 .hero__text--espresso {
   padding: 0 10px;
 }
+
+
+.hero__slider-container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero__description {
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+

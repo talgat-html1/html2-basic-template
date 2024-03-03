@@ -7,6 +7,11 @@
   @media (min-width: $tablet-width) {
     min-height: 324px;
   }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 318px;
+  }
 }
 
 .filter__title {
@@ -59,6 +64,14 @@
 .filter__button--reset {
   background-color: $base-white;
   color: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .filter__button-container {
@@ -69,13 +82,19 @@
   margin-top: 10px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 137px 120px;
+    grid-template-columns: 1fr 1fr;
     display: grid;
-    column-gap: 20px;
-    grid-template-rows: 40px;
+    column-gap: 2px;
     width: 277px;
     min-height: 40px;
     margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 318px;
+    column-gap: 20px;;
+    grid-template-columns: 149px 149px;
   }
 }
 
@@ -157,4 +176,10 @@
 
 .filter__toggle[type="checkbox"]:checked + .filter__toggle-mark {
   background-color: $base-primary;
+}
+
+.filter__label-milk:last-child {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
 }

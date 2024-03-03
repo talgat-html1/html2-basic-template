@@ -43,3 +43,13 @@
 .main-footer__logo-image {
   padding-top: 5px;
 }
+
+.main-footer__box {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 1440px;
+    margin: 0 auto;
+    min-height: 172px;
+    padding-bottom: 29px;
+  }
+}

@@ -16,7 +16,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 202px;
+    display: flex;
+    width: 316px;
+    gap: 20px;
   }
 }
 
@@ -62,7 +64,11 @@
   display: none;
 
   @media (min-width: $desktop-width) {
-    display: unset;
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    margin-left: 10px;
+    margin-right: 4px;
   }
 }
 
@@ -72,8 +78,25 @@
   flex-wrap: wrap;
   height: fit-content;
 
+  @media (max-width: $mobile-width-only) {
+    margin: 0 auto;
+    width: 320px;
+    padding-left: 20px;
+  }
+
   @media (min-width: $tablet-width) {
     display: unset;
+    display: flex;
+    margin: 0 auto;
+    width: 768px;
+    padding: 0 20px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    width: 1360px;
+    padding: 0;
   }
 }
 
@@ -87,6 +110,12 @@
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    width: 112px;
+    height: 80px;
+    justify-content: flex-start;
+    align-items: center;
+
     &:hover svg {
       fill: $base-primary;
     }
@@ -121,6 +150,10 @@
   @media (min-width: $tablet-width) {
     width: 82px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
 }
 
 .main-header__nav {
@@ -131,6 +164,11 @@
   @media (min-width: $tablet-width) {
     width: 120px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 261px;
+    gap: 20px;
+  }
 }
 
 .main-header__title {
@@ -140,25 +178,17 @@
 
   @media (min-width: $desktop-width) {
     display: unset;
+    font-size: 12px;
+    line-height: 16px;
+    width: 126px;
+    padding-top: 2px;
   }
 }
 
 .main-header__icon {
   margin: 22px;
-}
 
-.main-header__container {
-  @media (max-width: $mobile-width-only) {
-    margin: 0 auto;
-    width: 320px;
-    padding-left: 20px;
-  }
-
-  @media (min-width:$tablet-width) {
-    display: flex;
-    margin: 0 auto;
-    width: 768px;
-    padding: 0 20px;
-    align-items: center;
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 20px;
   }
 }

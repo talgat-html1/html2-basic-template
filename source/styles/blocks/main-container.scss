@@ -2,23 +2,3 @@
   flex-grow: 1;
 }
 
-.main-container__badge {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 700;
-  color: $base-primary;
-  text-transform: uppercase;
-  text-align: center;
-  display: block;
-  margin-bottom: 4px;
-  letter-spacing: 0.04em;
-  padding: 0 10px;
-}
-
-.main-container__badge--new {
-  margin-bottom: 5px;
-
-  @media (min-width:$tablet-width) {
-    margin-bottom: 4px;
-  }
-}
