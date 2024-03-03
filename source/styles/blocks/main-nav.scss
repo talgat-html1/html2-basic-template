@@ -6,13 +6,9 @@
   position: relative;
   background-color: $base-white;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     display: none;
   }
-}
-
-.main-nav--closed {
-  display: none;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -22,5 +18,10 @@
     left: 0;
     right: 0;
     z-index: 5;
+    top: 60px;
+  }
+
+  .main-nav--closed {
+    display: none;
   }
 }

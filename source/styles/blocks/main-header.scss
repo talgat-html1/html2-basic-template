@@ -1,6 +1,10 @@
 .main-header {
   text-transform: uppercase;
   background-color: $base-white;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .main-header__logo-container {
@@ -9,14 +13,10 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    position: relative;
-    width: 174px;
-    min-height: 50px;
   }
 
   @media (min-width: $desktop-width) {
     width: 202px;
-    padding: 0;
   }
 }
 
@@ -29,14 +29,12 @@
   border: none;
   background-color: inherit;
   cursor: pointer;
-  margin: 22px 2px 22px 22px;
-
-  &:hover {
-    opacity: 0.5;
-  }
+  padding: 30px;
+  background-size: 16px;
+  background-position: center;
 
   &:active {
-    opacity: 0.2;
+    background-color: $primary-opacity;
   }
 
   @media (min-width: $tablet-width) {
@@ -63,7 +61,7 @@
 .main-header__text {
   display: none;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $desktop-width) {
     display: unset;
   }
 }
@@ -73,6 +71,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   height: fit-content;
+
+  @media (min-width: $tablet-width) {
+    display: unset;
+  }
 }
 
 .main-header__link {
@@ -115,15 +117,20 @@
   &:active {
     opacity: 0.2;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+  }
 }
 
 .main-header__nav {
   display: flex;
   flex-wrap: wrap;
   width: 180px;
-  justify-content: flex-end;
-  align-items: center;
-  height: fit-content;
+
+  @media (min-width: $tablet-width) {
+    width: 120px;
+  }
 }
 
 .main-header__title {
@@ -138,4 +145,20 @@
 
 .main-header__icon {
   margin: 22px;
+}
+
+.main-header__container {
+  @media (max-width: $mobile-width-only) {
+    margin: 0 auto;
+    width: 320px;
+    padding-left: 20px;
+  }
+
+  @media (min-width:$tablet-width) {
+    display: flex;
+    margin: 0 auto;
+    width: 768px;
+    padding: 0 20px;
+    align-items: center;
+  }
 }

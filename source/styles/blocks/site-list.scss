@@ -4,11 +4,43 @@
 
 .site-list__item {
   text-align: center;
-  padding: 20px 40px 20px 40px;
+  padding: 20px 40px;
   position: relative;
   border-bottom: 1px solid $base-secondary;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+    width: 103px;
+    padding: 31px 24px 31px 20px;
+    letter-spacing: .03em;
+  }
 }
 
 .site-list__item:first-child {
-  border-top: 1px solid $base-secondary;
+  @media (max-width: $mobile-width-only) {
+    border-top: 1px solid $base-secondary;
+  }
+}
+
+.site-list__item:nth-child(3) {
+  @media (min-width: $tablet-width) {
+    padding-left: 18px;
+  }
+}
+
+.site-list__item--current {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $base-primary;
+    color: $base-primary;
+  }
+}
+
+.site-list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 412px;
+    margin-left: 20px;
+  }
 }
