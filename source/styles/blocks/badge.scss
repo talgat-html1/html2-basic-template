@@ -1,0 +1,35 @@
+
+.badge {
+  font-family: $montserrat-font;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $base-primary;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+  padding: 0 10px;
+
+  @media (min-width: $desktop-width) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.badge--new {
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    padding-top: 140px;
+    margin: 10px 5px 3px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

@@ -5,6 +5,11 @@
   text-align: center;
   margin: 0;
   padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
 }
 
 .catalog__sorting {
@@ -14,6 +19,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    margin-bottom: 24px;
+    padding-top: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    text-align: right;
+    margin-top: 32px;
+    margin-bottom: 26px;
+  }
 }
 
 .catalog__select {
@@ -25,30 +45,87 @@
   width: 165px;
   border: none;
   min-height: 32px;
-  background-image: url("../../images/icons/stack.svg#icon-pagination-arrow");
-  background-repeat: no-repeat;
-  background-size: 10px 10px;
-  background-position: bottom 50% right 7px;
-  padding-right: 27px;
-  border: none;
   background-color: transparent;
   cursor: pointer;
   appearance: none;
-  padding-left: 13px;
+  padding: 4px 21px 4px 13px;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 21px 0px 10px;
+    background-position: 145px 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: 145px 15px;
+  }
+}
+
+.catalog__sorting-svg {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  right: 7px;
+  fill: $base-primary;
+
+  @media (min-width: $tablet-width) {
+    right: 10px;
+    top: 15px;
+  }
+}
+
+.catalog__select:active + .catalog__sorting-svg {
+  transform: rotate(180deg);
+}
+
+.catalog__select:hover,
+.catalog__select:focus-visible {
+  background-color: $base-secondary;
+}
+
+.catalog__select:focus-visible {
+  outline: none;
+}
+
+.catalog__select:active {
+  background-color: $lightest-grey;
+  outline: none;
 }
 
 .catalog__list {
   @include list;
-  min-height: 2620px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 349px 349px;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 317px 317px 317px;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-bottom: 60px;
+  }
 }
 
 .catalog__item-title {
   font-size: 18px;
   line-height: 32px;
   font-weight: 700;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-bottom: 0;
+  padding: 0 20px;
   color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    padding: 1px 30px;
+  }
 }
 
 .catalog__price {
@@ -56,7 +133,12 @@
   font-weight: 600;
   line-height: 32px;
   margin-left: 18px;
-  margin-right: 50px;
+  padding-top: 3px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 28px;
+    padding-top: 2px;
+  }
 }
 
 .catalog__button {
@@ -71,6 +153,20 @@
   padding-right: 10px;
   position: relative;
   cursor: pointer;
+  margin-left: 20px;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    cursor: default;
+  }
 }
 
 .catalog__button::before {
@@ -88,34 +184,82 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 160px;
+  width: 170px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    gap: 20px;
+    width: 180px;
+  }
 }
 
 .catalog__pagination-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+    margin-bottom: 46px;
+  }
 }
 
 .catalog__container {
-  min-height: 3760px;
   padding-top: 50px;
+  padding-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 48px;
+    min-height: unset;
+  }
 }
 
 .catalog__item {
-  min-height: 420px;
+  margin-bottom: 20px;
   background-color: $base-white;
+  min-height: 420px;
+
+  &:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15)
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 460px;
+  }
 }
 
 .catalog__picture-wrapper {
-  padding: 30px 65px 0 65px;
+  padding: 40px 65px 0 65px;
   margin: 10px 10px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 99px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 84px 0;
+  }
 }
 
 .catalog__text {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 5px 20px 15px;
   color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    margin: 9px 30px 20px;
+  }
 }
 
 .catalog__pagination-link {
@@ -123,15 +267,48 @@
   height: 40px;
   display: block;
   text-align: center;
-  padding: px;
   color: $base-primary;
   font-size: 16px;
   line-height: 40px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $base-white;
+  }
 }
 
 .catalog__pagination-link--current {
   font-weight: 600;
   color: $base-black;
+
+  &:hover {
+    cursor: default;
+    color: $base-black;
+    background-color: $lightest-grey;
+  }
+
+  &:active {
+    cursor: default;
+    color: $base-black;
+    background-color: $lightest-grey;
+  }
+
+  &:disabled {
+    cursor: default;
+    color: $base-black;
+    background-color: $lightest-grey;
+  }
 }
 
 .catalog__pagination-item {
@@ -141,6 +318,10 @@
   border-radius: 4px;
   margin-bottom: 5px;
   margin-right: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
+  }
 }
 
 .catalog__pagination-item--current {
@@ -153,28 +334,94 @@
   background-color: $base-white;
   border-radius: 4px;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    transform: unset;
+    width: unset;
+    margin-left: 20px;
+  }
 }
 
 .catalog__pagination-prev {
-  width: 10px;
-  height: 10px;
+  width: 40px;
+  height: 40px;
   border: none;
   background-color: inherit;
   transform: rotate(90deg);
   cursor: pointer;
   padding: 0;
-  margin: 15px 13px 15px 17px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    transform: unset;
+    width: 91px;
+    padding: 8px 20px;
+  }
+}
+
+.catalog__pagination-svg {
+  fill: $base-primary;
+}
+
+.catalog__pagination-prev:hover .catalog__pagination-svg,
+.catalog__pagination-prev:focus-visible .catalog__pagination-svg,
+.catalog__pagination-prev:active .catalog__pagination-svg,
+.catalog__pagination-prev--disabled .catalog__pagination-svg {
+  fill: $base-white;
+}
+
+.catalog__pagination-next:hover .catalog__pagination-svg,
+.catalog__pagination-next:focus-visible .catalog__pagination-svg,
+.catalog__pagination-next:active .catalog__pagination-svg,
+.catalog__pagination-next--disabled .catalog__pagination-svg {
+  fill: $base-white;
 }
 
 .catalog__pagination-next {
-  width: 10px;
-  height: 10px;
+  width: 40px;
+  height: 40px;
   border: none;
   background-color: inherit;
   transform: rotate(270deg);
   cursor: pointer;
   padding: 0;
-  margin: 15px 17px 15px 13px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    transform: unset;
+    width: 104px;
+    padding: 8px 20px;
+  }
+}
+
+.catalog__pagination-svg {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .catalog__range-wrapper {
@@ -183,11 +430,11 @@
   margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 20px;
+    margin-bottom: 34px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 22px;
+    margin-bottom: 36px;
   }
 }
 
@@ -267,12 +514,12 @@
     display: grid;
     grid-template-columns: 223px 222px 223px;
     gap: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 318px;
-    margin-top: 4px;
+    display: block;
+    width: 318px;
   }
 }
 
@@ -285,12 +532,106 @@
   line-height: 24px;
   font-weight: 600;
   margin-bottom: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 1px;
+  }
 }
 
 .catalog__price-container {
   margin-top: 20px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 40px;
+  }
 }
 
 .catalog__sorting-title {
   padding-left: 3px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 11px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 6px;
+  }
+}
+
+.catalog__basket-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  justify-content: space-between;
+  padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 319px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 287px;
+  }
+}
+
+.catalog__pagination-item:first-child {
+  margin-left: 5px;
+}
+
+.catalog__pagination-text {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: unset;
+    font-size: 16px;
+    line-height: 24px;
+    color: $base-primary;
+    font-family: $montserrat-font;
+
+    &:hover {
+      background-color: $primary-lighter;
+      color: $base-white;
+    }
+
+    &:active {
+      background-color: $primary-darker;
+      color: $base-white;
+    }
+
+    &:disabled {
+      background-color: $light-grey;
+      color: $base-white;
+    }
+  }
+}
+
+.catalog__pagination-prev,
+.catalog__pagination-next {
+  @media (min-width: $tablet-width) {
+    &:hover span {
+      background-color: $primary-lighter;
+      color: $base-white;
+    }
+
+    &:active span {
+      background-color: $primary-darker;
+      color: $base-white;
+    }
+  }
+}
+
+.catalog__pagination-prev,
+.catalog__pagination-next {
+  @media (min-width: $tablet-width) {
+    &:disabled {
+      display: none;
+    }
+  }
+}
+
+.catalog__main-container {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 30px;
+  }
 }

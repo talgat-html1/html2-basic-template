@@ -3,6 +3,15 @@
   line-height: 24px;
   min-height: 770px;
   margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 324px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 318px;
+  }
 }
 
 .filter__title {
@@ -20,10 +29,18 @@
 .filter__set-milk {
   min-height: 200px;
   margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
 }
 
 .filter__set-country {
   min-height: 244px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+  }
 }
 
 .filter__button {
@@ -33,6 +50,24 @@
   border: none;
   min-height: 40px;
   border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    cursor: default;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-height: 40px;
+  }
 }
 
 .filter__button--submit {
@@ -43,6 +78,29 @@
 .filter__button--reset {
   background-color: $base-white;
   color: $base-primary;
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $base-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .filter__button-container {
@@ -51,6 +109,22 @@
   min-height: 100px;
   gap: 20px;
   margin-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    column-gap: 2px;
+    width: 277px;
+    min-height: 40px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    width: 318px;
+    column-gap: 20px;;
+    grid-template-columns: 149px 149px;
+  }
 }
 
 .filter__set-milk {
@@ -79,12 +153,12 @@
   height: 24px;
   background-color: $base-white;
   border-radius: 50%;
-  border: 2px solid $base-primary;
+  border: 2px solid $base-grey;
   top: 0;
   left: 0;
 }
 
-.filter__radio[type="radio"]:checked + .filter__radio-mark::before {
+.filter__radio:not(:disabled):checked + .filter__radio-mark::before {
   @include pseudo;
   width: 16px;
   height: 16px;
@@ -92,6 +166,57 @@
   border-radius: 50%;
   top: 2px;
   left: 2px;
+}
+
+.filter__radio:checked + .filter__radio-mark {
+  border: 2px solid $base-primary;
+}
+
+.filter__radio:not(:disabled):hover + .filter__radio-mark,
+.filter__radio:not(:disabled):focus-visible ~ .filter__mark {
+  border-color: $primary-lighter;
+}
+
+.filter__radio:not(:disabled):hover + .filter__radio-mark::before,
+.filter__radio:not(:checked):hover + .filter__radio-mark::before {
+  @include pseudo;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $primary-opacity;
+}
+
+.filter__radio[type="radio"]:disabled + .filter__radio-mark {
+  border: 2px solid $light-grey;
+  cursor: default;
+}
+
+.filter__radio[type="radio"]:disabled ~ .filter__mark,
+.filter__radio[type="radio"]:disabled + .filter__label-milk {
+  color: $base-grey;
+  cursor: default;
+}
+
+.filter__radio:not(:enabled):hover + .filter__radio-mark::before {
+  background-color: transparent;
+}
+
+.filter__radio:not(:enabled):checked + .filter__radio-mark::before  {
+  @include pseudo;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $light-grey;
+}
+
+.filter__radio:not(:disabled):checked + .filter__radio-mark::before {
+  background-color: $base-primary;
 }
 
 .filter__label-country {
@@ -110,6 +235,7 @@
   border-radius: 12px;
   top: 0;
   left: 0;
+  border: 2px solid $base-grey;
 }
 
 .filter__toggle-mark::before {
@@ -118,8 +244,6 @@
   height: 20px;
   background-color: $base-white;
   border-radius: 50%;
-  top: 2px;
-  left: 2px;
   transition: .3s;
 }
 
@@ -129,6 +253,44 @@
   transition: .3s;
 }
 
-.filter__toggle[type="checkbox"]:checked + .filter__toggle-mark {
+.filter__toggle:not(:enabled):checked + .filter__toggle-mark::before {
+  transform: translateX(18px);
+  background-color: $base-grey;
+}
+
+.filter__toggle:not(:enabled):checked + .filter__toggle-mark {
+  background-color: $light-grey;
+}
+
+.filter__toggle:not(:disabled):checked + .filter__toggle-mark {
   background-color: $base-primary;
+  border: 2px solid $base-primary;
+}
+
+.filter__toggle:not(:disabled):hover + .filter__toggle-mark,
+.filter__toggle:not(:disabled):focus-visible + .filter__toggle-mark {
+  border: 2px solid $primary-lighter;
+  background-color: $primary-opacity;
+}
+
+.filter__toggle:disabled + .filter__toggle-mark {
+  background-color: $light-grey;
+  border: 2px solid $light-grey;
+  cursor: default;
+}
+
+.filter__toggle:disabled + .filter__toggle-mark::before,
+.filter__toggle:disabled ~ .filter__toggle-name {
+  background-color: $lightest-grey;
+  cursor: default;
+}
+
+filter__label-country.checkbox input:disabled + span{
+  color: #ccc;
+}
+
+.filter__label-milk:last-child {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
 }

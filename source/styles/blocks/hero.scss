@@ -16,10 +16,38 @@
   margin: 0 auto;
   letter-spacing: 0.02em;
   padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    width: 608px;
+    margin: 0 auto 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 625px;
+    margin: 0;
+    padding-left: 15px;
+  }
 }
 
 .hero__image-container {
   margin-bottom: 4px;
+  min-height: 280px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 146px;
+    top: 293px;
+    min-height: 476px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: unset;
+    grid-row: 1/3;
+    min-height: 600px;
+    padding-left: 50px;
+  }
 }
 
 .hero__price-old {
@@ -28,6 +56,11 @@
   text-decoration: line-through;
   margin-left: 25px;
   line-height: 32px;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 15px;
+    margin-top: 1px;
+  }
 }
 
 .hero__price-new {
@@ -49,17 +82,41 @@
   background-color: $base-white;
   transform: translateY(-60px);
   opacity: 1;
+  margin-right: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-opacity;
+  }
+
+  &:focus {
+    background-color: $primary-opacity;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
 }
 
 .hero__page--active {
   background-color: $base-primary;
 }
 
-.hero__pages {
+.hero__pages-container {
   display: none;
 
   @media (min-width: $desktop-width) {
     display: unset;
+    position: relative;
+  }
+}
+
+.hero__pages {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    left: -101px;
   }
 }
 
@@ -73,14 +130,11 @@
     padding-top: 60px;
     padding-bottom: 0;
     min-height: 828px;
-    background: linear-gradient(to top, $base-white 188px, $flat-white 188px);
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 30px;
-    padding-bottom: 84px;
     min-height: 714px;
-    background: $flat-white;
   }
 }
 
@@ -88,15 +142,25 @@
   display: block;
 }
 
+.hero__slider-white {
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(to top, $base-white 188px, $flat-white 188px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background: $flat-white;
+  }
+}
+
 .hero__slider-lavender {
   background-color: $lavender-latte;
 
   @media (min-width: $tablet-width) {
-    background-color: linear-gradient(to top, $base-white 188px, $lavender-latte 188px);
+    background: linear-gradient(to top, $base-white 188px, $lavender-latte 188px);
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $lavender-latte;
+    background: $lavender-latte;
   }
 }
 
@@ -104,11 +168,11 @@
   background-color: $espresso;
 
   @media (min-width: $tablet-width) {
-    background-color: linear-gradient(to top, $base-white 188px, $espresso 188px);
+    background: linear-gradient(to top, $base-white 188px, $espresso 188px);
   }
 
   @media (min-width: $desktop-width) {
-    background-color: $espresso;
+    background: $espresso;
   }
 }
 
@@ -123,13 +187,20 @@
   background-color: transparent;
   border: none;
   width: 20px;
-  min-height: 714px;
+  min-height: 656px;
   padding: 0;
   cursor: pointer;
   top: 329px;
 
   @media (min-width: $tablet-width) {
     width: 80px;
+    min-height: 640px;
+    top: 321px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 714px;
+    top: 358px;
   }
 
   &:disabled svg {
@@ -199,6 +270,22 @@
   margin-right: 25px;
   font-size: 16px;
   line-height: 24px;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 35px;
+  }
 }
 
 .hero__slider-price {
@@ -206,16 +293,48 @@
   align-items: center;
   min-height: 40px;
   justify-content: space-between;
-  margin: 0 auto 60px auto;
+  margin: 0 auto;
   width: 280px;
+  padding-bottom: 60px;
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    padding-bottom: 154px;
+  }
 }
 
 .hero__text {
   margin-top: 10px;
   margin-bottom: 20px;
   padding: 0 5px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+    width: 608px;
+    margin: 0 auto 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 17px 0 0 10px;
+  }
 }
 
 .hero__text--espresso {
   padding: 0 10px;
 }
+
+
+.hero__slider-container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero__description {
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+

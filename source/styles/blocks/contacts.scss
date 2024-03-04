@@ -1,17 +1,29 @@
-.contacts {
-  min-height: 223px;
-}
-
 .contacts__container {
   border-bottom: 1px solid $base-secondary;
   min-height: 116px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+    padding-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 15px;
+  }
 }
 
 .contacts__text {
   font-style: normal;
-  padding-left: 19px;
-  padding-bottom: 16px;
   position: relative;
+  padding: 8px 5px 10px 19px;
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: unset;
+  }
 }
 
 .contacts__text::before {
@@ -20,16 +32,31 @@
   background-repeat: no-repeat;
   width: 13px;
   height: 16px;
-  top: 2px;
-  left: 2px;
+  top: 10px;
+  left: 0;
 }
 
 .contacts__phone {
   color: $base-black;
-  padding-left: 19px;
-  padding-bottom: 20px;
   display: inline-block;
+  padding: 6px 5px 20px 19px;
   position: relative;
+
+  &:hover {
+    color: $primary-lighter;
+  }
+
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+  }
 }
 
 .contacts__phone::before {
@@ -38,26 +65,22 @@
   background-repeat: no-repeat;
   width: 13px;
   height: 16px;
-  top: 2px;
-  left: 2px;
+  top: 8px;
+  left: 0;
 }
 
-.contacts__logo {
-  min-height: 66px;
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 3px;
-}
+.contacts__box {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 20px;
 
-.contacts__logo-text {
-  font-size: 12px;
-  line-height: 16px;
-  color: $base-grey;
-  width: 91px;
-  min-height: 16px;
-}
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    padding: 0;
+  }
 
-.contacts__logo-link {
-  display: inline-block;
+  @media (min-width: $desktop-width) {
+    width: 317px;
+    padding: 0;
+  }
 }
