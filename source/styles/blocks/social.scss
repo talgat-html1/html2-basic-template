@@ -24,7 +24,9 @@
   display: none;
 
   @media (min-width: $desktop-width) {
-    display: unset;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 50px;
   }
 }
 
@@ -50,26 +52,12 @@
   height: 40px;
 }
 
-.social__text {
-  @media (min-width: $desktop-width) {
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 50px;
-  }
-}
-
 .social__link {
   padding: 10px;
   display: block;
   width: 40px;
   height: 40px;
-}
 
-.social__link-icon {
-  fill: $base-grey;
-}
-
-.social__link {
   &:hover svg {
     fill: $base-primary;
   }
@@ -88,4 +76,8 @@
     background-color: $primary-opacity;
     border-radius: 4px;
   }
+}
+
+.social__link-icon {
+  fill: $base-grey;
 }

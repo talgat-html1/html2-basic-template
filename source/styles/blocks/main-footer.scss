@@ -19,6 +19,11 @@
     width: 220px;
     padding: 10px 10px 12px 0;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 220px;
+    padding: 50px 10px 12px 0;
+  }
 }
 
 .main-footer_map {
@@ -50,6 +55,6 @@
     width: 1440px;
     margin: 0 auto;
     min-height: 172px;
-    padding-bottom: 29px;
+    padding-bottom: 15px;
   }
 }

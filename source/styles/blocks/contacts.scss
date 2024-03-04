@@ -28,7 +28,7 @@
 
 .contacts__text::before {
   @include pseudo;
-  background-image: url("../../images/icons/icon-address.svg");
+  background-image: url("../../images/icons/stack.svg#icon-address");
   background-repeat: no-repeat;
   width: 13px;
   height: 16px;
@@ -61,7 +61,7 @@
 
 .contacts__phone::before {
   @include pseudo;
-  background-image: url("../../images/icons/icon-phone.svg");
+  background-image: url("../../images/icons/stack.svg#icon-phone");
   background-repeat: no-repeat;
   width: 13px;
   height: 16px;

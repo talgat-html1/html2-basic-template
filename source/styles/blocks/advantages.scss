@@ -89,7 +89,7 @@
 
 .advantages__item-title--speed::after {
   @include pseudo;
-  background-image: url("../../images/icons/icon-speed.svg");
+  background-image: url("../../images/icons/stack.svg#icon-speed");
   background-repeat: no-repeat;
   width: 52px;
   height: 56px;
@@ -109,7 +109,7 @@
 
 .advantages__item-title--fit::after {
   @include pseudo;
-  background-image: url("../../images/icons/icon-fit.svg");
+  background-image: url("../../images/icons/stack.svg#icon-fit");
   background-repeat: no-repeat;
   width: 52px;
   height: 56px;
@@ -129,7 +129,7 @@
 
 .advantages__item-title--energy::after {
   @include pseudo;
-  background-image: url("../../images/icons/icon-energy.svg");
+  background-image: url("../../images/icons/stack.svg#icon-energy");
   background-repeat: no-repeat;
   width: 52px;
   height: 56px;
@@ -149,7 +149,7 @@
 
 .advantages__item-title--eco::after {
   @include pseudo;
-  background-image: url("../../images/icons/icon-eco.svg");
+  background-image: url("../../images/icons/stack.svg#icon-eco");
   background-repeat: no-repeat;
   width: 52px;
   height: 56px;
