@@ -1,0 +1,47 @@
+.logo {
+  min-height: 66px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    min-height: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: unset;
+    padding-bottom: 40px;
+  }
+}
+
+.logo__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: $base-grey;
+  width: 91px;
+  min-height: 16px;
+}
+
+.logo__link {
+  display: inline-block;
+}
+
+.logo__icon {
+  fill: $base-grey;
+}
+
+.logo__link {
+  &:hover svg {
+    fill: $base-primary;
+  }
+
+  &:focus svg {
+    fill: $base-primary;
+  }
+
+  &:active svg {
+    fill: $primary-darker;
+  }
+}

@@ -57,6 +57,18 @@
   display: block;
   letter-spacing: 0.02em;
 
+  &:hover {
+    color: $primary-lighter;
+  }
+
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+
   @media (min-width: $tablet-width) {
     width: 220px;
   }

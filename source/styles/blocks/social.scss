@@ -46,9 +46,8 @@
 }
 
 .social__item {
-  width: 20px;
-  height: 20px;
-  margin: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 .social__text {
@@ -56,5 +55,37 @@
     display: block;
     margin-top: 5px;
     margin-bottom: 50px;
+  }
+}
+
+.social__link {
+  padding: 10px;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.social__link-icon {
+  fill: $base-grey;
+}
+
+.social__link {
+  &:hover svg {
+    fill: $base-primary;
+  }
+
+  &:hover {
+    background-color: $base-secondary;
+    border-radius: 4px;
+  }
+
+  &:focus {
+    background-color: $base-secondary;
+    border-radius: 4px;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+    border-radius: 4px;
   }
 }

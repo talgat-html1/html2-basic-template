@@ -42,6 +42,18 @@
   padding: 6px 5px 20px 19px;
   position: relative;
 
+  &:hover {
+    color: $primary-lighter;
+  }
+
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+
   @media (min-width: $tablet-width) {
     width: 220px;
   }
@@ -55,35 +67,6 @@
   height: 16px;
   top: 8px;
   left: 0;
-}
-
-.contacts__logo {
-  min-height: 66px;
-  padding: 20px 0;
-  display: flex;
-  justify-content: center;
-  gap: 3px;
-
-  @media (min-width: $tablet-width) {
-    padding-top: 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-height: unset;
-    padding-bottom: 40px;
-  }
-}
-
-.contacts__logo-text {
-  font-size: 12px;
-  line-height: 16px;
-  color: $base-grey;
-  width: 91px;
-  min-height: 16px;
-}
-
-.contacts__logo-link {
-  display: inline-block;
 }
 
 .contacts__box {
