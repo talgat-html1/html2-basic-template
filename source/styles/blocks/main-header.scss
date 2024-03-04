@@ -25,7 +25,7 @@
 .main-header__toggle {
   height: 16px;
   width: 16px;
-  background-image: url("../../images/icons/icon-closed.svg");
+  background-image: url("../../images/icons/stack.svg#icon-closed");
   background-repeat: no-repeat;
   border: none;
   background-color: inherit;
@@ -45,7 +45,7 @@
 
 .main-header__toggle--closed {
   display: block;
-  background-image: url("../../images/icons/icon-closed.svg");
+  background-image: url("../../images/icons/stack.svg#icon-closed");
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -55,7 +55,7 @@
 @media (max-width: $mobile-width-only) {
   .main-header__toggle--opened {
     display: block;
-    background-image: url("../../images/icons/icon-opened.svg");
+    background-image: url("../../images/icons/stack.svg#icon-opened");
   }
 }
 
