@@ -29,6 +29,9 @@
 .filter__set-milk {
   min-height: 200px;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     margin-top: 20px;
@@ -37,6 +40,9 @@
 
 .filter__set-country {
   min-height: 244px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
   @media (min-width: $tablet-width) {
     margin-top: 20px;
@@ -122,21 +128,9 @@
   @media (min-width: $desktop-width) {
     margin: 0;
     width: 318px;
-    column-gap: 20px;;
+    column-gap: 20px;
     grid-template-columns: 149px 149px;
   }
-}
-
-.filter__set-milk {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.filter__set-country {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .filter__label-milk {
@@ -204,7 +198,7 @@
   background-color: transparent;
 }
 
-.filter__radio:not(:enabled):checked + .filter__radio-mark::before  {
+.filter__radio:not(:enabled):checked + .filter__radio-mark::before {
   @include pseudo;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -213,10 +207,6 @@
   height: 16px;
   border-radius: 50%;
   background-color: $light-grey;
-}
-
-.filter__radio:not(:disabled):checked + .filter__radio-mark::before {
-  background-color: $base-primary;
 }
 
 .filter__label-country {
@@ -244,17 +234,17 @@
   height: 20px;
   background-color: $base-white;
   border-radius: 50%;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .filter__toggle[type="checkbox"]:checked + .filter__toggle-mark::before {
-  transform: translateX(18px);
+  transform: translateX(1em);
   background-color: $base-white;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .filter__toggle:not(:enabled):checked + .filter__toggle-mark::before {
-  transform: translateX(18px);
+  transform: translateX(1em);
   background-color: $base-grey;
 }
 
@@ -283,10 +273,6 @@
 .filter__toggle:disabled ~ .filter__toggle-name {
   background-color: $lightest-grey;
   cursor: default;
-}
-
-filter__label-country.checkbox input:disabled + span{
-  color: #ccc;
 }
 
 .filter__label-milk:last-child {

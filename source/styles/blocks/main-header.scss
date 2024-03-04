@@ -9,7 +9,7 @@
 
 .main-header__logo-container {
   position: relative;
-  padding: 12px 0 12px 0;
+  padding: 12px 0;
 
   @media (min-width: $tablet-width) {
     padding: 0;
@@ -25,7 +25,6 @@
 .main-header__toggle {
   height: 16px;
   width: 16px;
-  padding: 0;
   background-image: url("../../images/icons/icon-closed.svg");
   background-repeat: no-repeat;
   border: none;
@@ -85,7 +84,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    display: unset;
     display: flex;
     margin: 0 auto;
     width: 768px;
